@@ -1,6 +1,7 @@
+import streamlit as st
+
 pip install --upgrade "crewai[tools]" databricks-sdk
 pip install "chromadb<=0.5.23" "litellm<=1.60.2" "tokenizers<=0.20.3" "httpx<0.28.0"
-pip install streamlit
 
 import pkgutil
 import crewai_tools
@@ -10,8 +11,6 @@ print([mod.name for mod in pkgutil.iter_modules(crewai_tools.__path__)])
 
 import os
 from google.colab import userdata
-
-import streamlit as st
 from openai import OpenAI
 
 os.environ["OPENAI_API_KEY"] = userdata.get('open_ai_key')
