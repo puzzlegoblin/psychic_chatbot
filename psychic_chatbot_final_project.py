@@ -3,9 +3,6 @@ import streamlit as st
 st.title("Your New Favourite Psychic")
 st.write("The Future is Closer Than You Think")
 
-pip install --upgrade "crewai[tools]" databricks-sdk
-pip install "chromadb<=0.5.23" "litellm<=1.60.2" "tokenizers<=0.20.3" "httpx<0.28.0"
-
 import pkgutil
 import crewai_tools
 
