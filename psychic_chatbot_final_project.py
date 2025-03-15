@@ -124,13 +124,14 @@ crew = Crew(
     tasks=[research_task, write_task],
     process=Process.sequential,
     verbose=True
-)
+    manager_llm=openai,
+        manager_callbacks=[CustomHandler("Crew Manager")]
+    )
+    final = project_crew.kickoff()
 
 # Execute Research
 result = crew.kickoff()
 print(f"DEBUG: Query being used for search: {topic}")
 
-# Display the final result
-result = f"## Here is the Final Result \n\n {final}"
-    st.session_state.messages.append({"role": "assistant", "content": result})
-    st.chat_message("assistant").write(result)
+st.session_state.messages.append({"role": "assistant", "content": result})
+st.chat_message("assistant").write(result)
