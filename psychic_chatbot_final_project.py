@@ -123,7 +123,7 @@ crew = Crew(
     agents=[researcher, psychic],
     tasks=[research_task, write_task],
     process=Process.sequential,
-    verbose=True
+    verbose=True,
     manager_llm=openai,
         manager_callbacks=[CustomHandler("Crew Manager")]
     )
