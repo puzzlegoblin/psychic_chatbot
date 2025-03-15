@@ -127,7 +127,7 @@ crew = Crew(
     manager_llm=openai,
         manager_callbacks=[CustomHandler("Crew Manager")]
     )
-    final = project_crew.kickoff()
+final = project_crew.kickoff()
 
 # Execute Research
 result = crew.kickoff()
