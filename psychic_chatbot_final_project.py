@@ -1,8 +1,9 @@
 import os
 import streamlit as st
+import crewai
+
 from crewai import Crew, Process, Agent, Task
 from crewai_tools import SerperDevTool, WebsiteSearchTool
-from langchain_core.callbacks import BaseCallbackHandler
 from langchain_openai import ChatOpenAI
 from typing import Any, Dict
 
